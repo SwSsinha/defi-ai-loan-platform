@@ -3,8 +3,8 @@
 // Flow: Connect wallet -> Deposit NAHAN -> Get AI risk score -> Borrow USDC
 
 const API_KEY = 'YOUR_VERBWIRE_API_KEY'; // Replace with actual key
-const CONTRACT_ADDRESS = 'DEPLOYED_CONTRACT_ADDRESS'; // Replace with actual address
-const AI_ENDPOINT = 'AKASH_AI_API_URL'; // Replace with Akash URL
+const CONTRACT_ADDRESS = '0xCA75c49B1f10D1dc577da030fD4c6f0220376de0'; // Deployed LendrAI contract on BlockDAG testnet
+const AI_ENDPOINT = 'AKASH_AI_API_URL'; // Replace with Akash URL e.g. https://akash-url.com/api/risk-score
 
 let provider;
 let signer;
