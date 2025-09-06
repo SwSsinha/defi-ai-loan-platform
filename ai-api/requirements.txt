@@ -1,0 +1,11 @@
+# DeFi-AI Risk Assessment API Requirements
+# Purpose: Python dependencies for Flask API deployment
+# Install with: pip install -r requirements.txt
+
+Flask==2.3.3
+requests==2.31.0
+
+# Add Hugging Face transformers for full AI model (optional for MVP)
+# transformers==4.33.3
+# torch==2.0.1
+# accelerate==0.23.0

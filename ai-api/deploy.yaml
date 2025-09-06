@@ -1,0 +1,48 @@
+---
+version: "2.0"
+
+# DeFi-AI Risk Assessment API Deployment for Akash Network
+# Purpose: Define containerized service deployment on decentralized compute
+# Services: Flask API with GPU access for future full AI model
+# Reference: https://docs.akash.network
+
+services:
+  risk-api:
+    image: ghcr.io/username/defi-ai-risk-api:latest  # Build and push to registry first
+    expose:
+      - port: 5000
+        as: 80
+        proto: tcp
+        to:
+          - global: true
+    env:
+      - FLASK_ENV=production
+
+profiles:
+  compute:
+    risk-api:
+      resources:
+        cpu:
+          units: 1000
+        memory:
+          size: 512Mi
+        storage:
+          size: 1Gi
+  placement:
+    akash:
+      signedBy:
+        anyOf:
+          - "akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63"
+      pricing:
+        risk-api:
+          denom: uakt
+          amount: 10000
+
+deployment:
+  risk-api:
+    akash:
+      deployment:
+        proto: tcp
+        expose:
+          port: 5000
+          global: true

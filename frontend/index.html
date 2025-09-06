@@ -1,0 +1,37 @@
+<!--
+DeFi-AI Loan Frontend - Verbwire Integration
+This HTML file provides the user interface for the loan platform
+Purpose: Connect wallet, deposit collateral, borrow loans with AI check
+Uses Verbwire API for blockchain interactions
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi-AI Loan Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DeFi-AI Loan Platform</h1>
+        <p>Deposit BDAG, get AI-verified loans at better rates!</p>
+
+        <div class="status">
+            <p id="status">Wallet not connected</p>
+        </div>
+
+        <button id="connectWallet" class="btn">Connect Wallet</button>
+        <button id="deposit" class="btn">Deposit Collateral</button>
+        <button id="borrow" class="btn">Borrow Loan</button>
+
+        <div class="info">
+            <p>Your Collateral: <span id="collateral">0</span> BDAG</p>
+            <p>Your Loan: <span id="loan">0</span> USD</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
