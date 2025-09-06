@@ -2,7 +2,7 @@
 // Purpose: Handle wallet connection, collateral deposit, and loan borrowing with AI check
 // Flow: Connect wallet -> Deposit NAHAN -> Get AI risk score -> Borrow USDC
 
-const API_KEY = 'YOUR_VERBWIRE_API_KEY'; // Replace with actual key
+const API_KEY = 'pk_live_4ea048e9-2020-4dc2-8e4e-72c9eb1d1058'; // Verbwire public key for API calls
 const CONTRACT_ADDRESS = '0xCA75c49B1f10D1dc577da030fD4c6f0220376de0'; // Deployed LendrAI contract on BlockDAG testnet
 const AI_ENDPOINT = 'AKASH_AI_API_URL'; // Replace with Akash URL e.g. https://akash-url.com/api/risk-score
 
